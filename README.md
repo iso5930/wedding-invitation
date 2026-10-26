@@ -17,6 +17,8 @@ React + TypeScript + Vite 기반의 모바일 청첩장입니다. 현재 단계�
 
 자세한 화면·동작 명세: [기획서](docs/layout-interaction-plan.md)
 
+완료·예정 작업: [작업 목록](docs/work-list.md)
+
 ## 실행
 
 Node.js 24 LTS와 npm을 권장합니다 (최소 Node.js 22.12).
