@@ -58,6 +58,10 @@ VITE_BASE_PATH=/wedding-invitation/
 <img src={`${import.meta.env.BASE_URL}images/photo.jpg`} alt="사진 설명" />
 ```
 
-실제 배포 시 GitHub 저장소의 Settings → Pages → Source에서 GitHub Actions를 선택하고, 워크플로에서 Node.js 설정 → `npm ci` → `npm run build` → `dist/` 아티팩트 업로드 및 Pages 배포 단계를 구성합니다. 현재 단계에서는 기본 골격만 생성하며 배포 워크플로 및 실제 배포는 포함하지 않습니다.
+배포 주소: https://iso5930.github.io/wedding-invitation/
+
+`.github/workflows/deploy.yml`은 `main`에 push할 때마다 Node.js 24 환경에서 `npm ci` → `npm run build`를 실행하고, `dist/`를 GitHub Pages 아티팩트로 업로드하여 배포합니다. Actions 탭의 **Deploy to GitHub Pages → Run workflow**에서도 수동 실행할 수 있습니다.
+
+GitHub 저장소의 Settings → Pages → Build and deployment → Source는 **GitHub Actions**를 사용합니다. 소스 파일을 그대로 게시하는 브랜치 배포 방식은 Vite의 TSX 파일을 실행할 수 없으므로 빌드 결과물을 배포해야 합니다.
 
 [Vite 공식 GitHub Pages 배포 가이드](https://vite.dev/guide/static-deploy.html#github-pages)
